@@ -1,0 +1,23 @@
+setting:
+  minimumROIDimensions: 1
+  additionalInfo: true
+  binWidth: 1.0
+  distances: [1]
+  force2D: true
+  force2Ddimension: 0
+  hdf5Compression: lzf
+
+imageType:
+  Original: {}
+
+scalarFeatureClass:
+  firstorder: []
+  ih: []
+  ivh: []
+  glcm: []
+  glrlm: []
+  glszm: []
+  gldzm: []
+  gldm: []
+  ngtdm: []
+  shape2D: []

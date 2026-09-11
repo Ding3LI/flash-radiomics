@@ -1,0 +1,91 @@
+# Complete Flash-Radiomics extraction template using library defaults.
+# null disables an optional operation or delegates it to automatic behavior.
+
+setting:
+  label: 1
+  label_channel: 0
+  minimumROIDimensions: 2
+  minimumROISize: null
+  geometryTolerance: null
+  correctMask: false
+  additionalInfo: true
+
+  binWidth: 25.0
+  # Set binCount to a positive integer to use fixed-bin-count discretization.
+  binCount: null
+  binMinimum: null
+  distances: [1]
+  voxelArrayShift: 0
+  symmetricalGLCM: true
+  weightingNorm: null
+  gldm_a: 0
+  glcmPythonMCC: false
+
+  normalize: false
+  normalizeScale: 1.0
+  removeOutliers: null
+  resampledPixelSpacing: null
+  interpolator: sitkBSpline
+  preCrop: false
+  padDistance: 5
+  resegmentRange: null
+  resegmentMode: absolute
+  resegmentShape: false
+  force2D: false
+  # Array-axis index used when force2D is true.
+  force2Ddimension: 0
+
+  sigma: []
+  wavelet: coif1
+  start_level: 0
+  level: 1
+  gradientUseSpacing: true
+  lbp2DRadius: 1.0
+  lbp2DSamples: 8
+  lbp2DMethod: uniform
+  lbp3DLevels: 2
+  lbp3DIcosphereRadius: 1.0
+  lbp3DIcosphereSubdivision: 1
+
+  segmentClassWorkers: 0
+  # The CUDA GLSZM controls below preserve deterministic defaults.
+  cudaGlszmTieBreakLowestLabel: true
+  cudaGlszmDeterministicReduction: false
+  cudaGlszmAllowEarlyExit: true
+  cudaGlszmCclSyncInterval: 4
+  cudaGlszmCclFlattenInterval: 4
+
+  hdf5OutputPath: null
+  hdf5OutputDirectory: null
+  hdf5Compression: lzf
+
+voxelSetting:
+  kernelRadius: 1
+  maskedKernel: true
+  initValue: 0.0
+  # -1 selects the backend-specific automatic batch size.
+  voxelBatch: -1
+
+# Only listed image types are calculated. Per-image settings override setting.
+# Available types: Original, Mean, LoG, Laws, Gabor, IBSIWavelet,
+# SimoncelliWavelet, RieszTransformedSimoncelliWavelet, Wavelet, Square,
+# SquareRoot, Logarithm, Exponential, Gradient, LBP2D, and LBP3D.
+imageType:
+  Original: {}
+
+# Feature selection and mode control:
+#   null                    disables this extraction mode
+#   {}                      enables every supported feature class and feature
+#   firstorder: []          enables every non-deprecated first-order feature
+#   firstorder: [Mean]      enables only the named feature
+# Removing one mode section while retaining the other also disables the removed mode.
+scalarFeatureClass:
+  firstorder: [Mean, Variance]
+  glcm: [Contrast]
+
+spatialFeatureClass:
+  firstorder: [Mean]
+  glcm: [Contrast]
+
+# Scalar families: firstorder, ih, ivh, glcm, glrlm, glszm, gldzm, gldm, ngtdm, shape,  shape2D
+# Spatial families: firstorder, glcm, glrlm, glszm, gldm, ngtdm.

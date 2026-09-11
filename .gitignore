@@ -1,0 +1,66 @@
+# Build and package artifacts
+build/
+build*/
+dist/
+wheelhouse/
+*.egg-info/
+.wheel-test/
+*.so
+*.dylib
+*.dll
+*.o
+*.a
+
+# CMake-generated files
+CMakeCache.txt
+CMakeFiles/
+CTestTestfile.cmake
+Testing/
+cmake_install.cmake
+install_manifest.txt
+Makefile
+
+# Python caches and tooling
+__pycache__/
+*.py[cod]
+.coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environments and editors
+.venv/
+venv/
+env/
+ENV/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local data and generated outputs
+reproducibility/data/*
+!reproducibility/data/*.py
+!reproducibility/data/ibsi/
+!reproducibility/data/ibsi/**
+reproducibility/**/exp/
+reproducibility/**/logs/
+reproducibility/**/results/
+reproducibility/test_outputs/
+tmp_save/
+output/
+outputs/
+results/
+*_runs/
+flash_radiomics_hdf5/
+test_functionality/output/
+tutorials/output/
+*flashrad_output/
+
+# OS and local agent files
+.DS_Store
+Thumbs.db
+
+# Development-only documentation
+helper_docs/

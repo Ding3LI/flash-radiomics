@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel", "cmake>=3.18"]
+build-backend = "setuptools.build_meta"
+
+[tool.cibuildwheel]
+build = "cp3{10,11,12,13,14}-*"
+skip = ["*-musllinux_*", "*-manylinux_i686"]
+build-verbosity = 1
+
+environment = { FLASH_RADIOMICS_ENABLE_CUDA = "off", FLASH_RADIOMICS_NATIVE_CPU = "off" }
+
+test-requires = [
+  "numpy>=1.20.0",
+  "h5py>=3.0.0",
+  "SimpleITK>=2.0.0",
+  "pykwalify>=1.8.0",
+  "PyWavelets>=1.0.0",
+  "scipy>=1.6.0",
+  "scikit-image>=0.19.0",
+  "trimesh>=3.20.0",
+]
+test-command = "python -I -c \"import flash_radiomics as fr; backends = fr.detect_backends(); assert backends['cpu'], backends; assert fr.getFeatureClasses(); print('Flash-Radiomics', fr.__version__, backends, fr.__file__)\""
+
+[tool.cibuildwheel.linux]
+manylinux-x86_64-image = "quay.io/manylinux_cuda/manylinux_2_28_x86_64_cuda12_9:latest"
+manylinux-aarch64-image = "quay.io/manylinux_cuda/manylinux_2_28_aarch64_cuda12_9:latest"
+environment = { FLASH_RADIOMICS_ENABLE_CUDA = "on", FLASH_RADIOMICS_NATIVE_CPU = "off" }
+test-command = "python -I -c \"import flash_radiomics as fr; from flash_radiomics import _bindings; backends = fr.detect_backends(); assert backends['cpu'], backends; assert _bindings._lib_cuda is not None, 'CUDA library or runtime missing'; assert fr.getFeatureClasses(); print('Flash-Radiomics', fr.__version__, backends, fr.__file__)\""
+
+[tool.cibuildwheel.macos]
+environment = { FLASH_RADIOMICS_ENABLE_CUDA = "off", FLASH_RADIOMICS_NATIVE_CPU = "off", MACOSX_DEPLOYMENT_TARGET = "11.0" }

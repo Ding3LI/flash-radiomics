@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "name": "IBSI 1 Reference data sets - Lung cancer CT image configurations A-E",
+    "url": "https://ibsi.readthedocs.io/en/latest/05_Reference_data_sets.html",
+    "notes": [
+      "These JSON entries are a normalized transcription of the IBSI Configurations A-E tables for the lung cancer CT phantom.",
+      "The official IBSI materials provide these settings as documentation tables rather than a machine-readable JSON file.",
+      "The digital phantom is separate and does not use Config A-E in the same way."
+    ]
+  },
+  "common_parameters": {
+    "sample_identifier": "PAT1",
+    "roi_name": "GTV-1",
+    "texture_parameters": {
+      "glcm_distance": 1,
+      "ngtdm_distance": 1,
+      "ngldm_distance": 1,
+      "glszm_linkage_distance": 1,
+      "gldzm_linkage_distance": 1,
+      "ngldm_coarseness_alpha": 0,
+      "distance_metric": "Chebyshev",
+      "glcm_symmetric": true
+    },
+    "nifti_input_note": "When using the data in NIfTI format, both image stacks should be converted to at least 32-bit floating point and rounded to the nearest integer before further processing."
+  },
+  "configs": {
+    "A": {
+      "sample_identifier": "PAT1",
+      "roi_name": "GTV-1",
+      "extraction_mode": "2D",
+      "interpolation": {
+        "enabled": false,
+        "resampled_voxel_spacing_mm": null,
+        "image_interpolation_method": null,
+        "intensity_rounding": null,
+        "roi_interpolation_method": null,
+        "roi_partial_mask_volume": null
+      },
+      "resegmentation": {
+        "range_hu": [
+          -500,
+          400
+        ],
+        "outlier_filtering": null
+      },
+      "discretization": {
+        "texture_and_ih": {
+          "method": "FBS",
+          "bin_size_hu": 25
+        },
+        "ivh": null
+      },
+      "texture_parameters": {
+        "glcm_distance": 1,
+        "ngtdm_distance": 1,
+        "ngldm_distance": 1,
+        "glszm_linkage_distance": 1,
+        "gldzm_linkage_distance": 1,
+        "ngldm_coarseness_alpha": 0
+      }
+    },
+    "B": {
+      "sample_identifier": "PAT1",
+      "roi_name": "GTV-1",
+      "extraction_mode": "2D",
+      "interpolation": {
+        "enabled": true,
+        "resampled_voxel_spacing_mm": [
+          2.0,
+          2.0
+        ],
+        "spacing_scope": "axial",
+        "image_interpolation_method": "bilinear",
+        "intensity_rounding": "nearest_integer",
+        "roi_interpolation_method": "bilinear",
+        "roi_partial_mask_volume": 0.5
+      },
+      "resegmentation": {
+        "range_hu": [
+          -500,
+          400
+        ],
+        "outlier_filtering": null
+      },
+      "discretization": {
+        "texture_and_ih": {
+          "method": "FBN",
+          "n_bins": 32
+        },
+        "ivh": null
+      },
+      "texture_parameters": {
+        "glcm_distance": 1,
+        "ngtdm_distance": 1,
+        "ngldm_distance": 1,
+        "glszm_linkage_distance": 1,
+        "gldzm_linkage_distance": 1,
+        "ngldm_coarseness_alpha": 0
+      }
+    },
+    "C": {
+      "sample_identifier": "PAT1",
+      "roi_name": "GTV-1",
+      "extraction_mode": "3D",
+      "interpolation": {
+        "enabled": true,
+        "resampled_voxel_spacing_mm": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "image_interpolation_method": "trilinear",
+        "intensity_rounding": "nearest_integer",
+        "roi_interpolation_method": "trilinear",
+        "roi_partial_mask_volume": 0.5
+      },
+      "resegmentation": {
+        "range_hu": [
+          -1000,
+          400
+        ],
+        "outlier_filtering": null
+      },
+      "discretization": {
+        "texture_and_ih": {
+          "method": "FBS",
+          "bin_size_hu": 25
+        },
+        "ivh": {
+          "method": "FBS",
+          "bin_size_hu": 2.5
+        }
+      },
+      "texture_parameters": {
+        "glcm_distance": 1,
+        "ngtdm_distance": 1,
+        "ngldm_distance": 1,
+        "glszm_linkage_distance": 1,
+        "gldzm_linkage_distance": 1,
+        "ngldm_coarseness_alpha": 0
+      }
+    },
+    "D": {
+      "sample_identifier": "PAT1",
+      "roi_name": "GTV-1",
+      "extraction_mode": "3D",
+      "interpolation": {
+        "enabled": true,
+        "resampled_voxel_spacing_mm": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "image_interpolation_method": "trilinear",
+        "intensity_rounding": "nearest_integer",
+        "roi_interpolation_method": "trilinear",
+        "roi_partial_mask_volume": 0.5
+      },
+      "resegmentation": {
+        "range_hu": null,
+        "outlier_filtering": {
+          "type": "sigma",
+          "value": 3.0
+        }
+      },
+      "discretization": {
+        "texture_and_ih": {
+          "method": "FBN",
+          "n_bins": 32
+        },
+        "ivh": null
+      },
+      "texture_parameters": {
+        "glcm_distance": 1,
+        "ngtdm_distance": 1,
+        "ngldm_distance": 1,
+        "glszm_linkage_distance": 1,
+        "gldzm_linkage_distance": 1,
+        "ngldm_coarseness_alpha": 0
+      }
+    },
+    "E": {
+      "sample_identifier": "PAT1",
+      "roi_name": "GTV-1",
+      "extraction_mode": "3D",
+      "interpolation": {
+        "enabled": true,
+        "resampled_voxel_spacing_mm": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "image_interpolation_method": "tricubic_spline",
+        "intensity_rounding": "nearest_integer",
+        "roi_interpolation_method": "trilinear",
+        "roi_partial_mask_volume": 0.5
+      },
+      "resegmentation": {
+        "range_hu": [
+          -1000,
+          400
+        ],
+        "outlier_filtering": {
+          "type": "sigma",
+          "value": 3.0
+        }
+      },
+      "discretization": {
+        "texture_and_ih": {
+          "method": "FBN",
+          "n_bins": 32
+        },
+        "ivh": {
+          "method": "FBN",
+          "n_bins": 1000
+        }
+      },
+      "texture_parameters": {
+        "glcm_distance": 1,
+        "ngtdm_distance": 1,
+        "ngldm_distance": 1,
+        "glszm_linkage_distance": 1,
+        "gldzm_linkage_distance": 1,
+        "ngldm_coarseness_alpha": 0
+      }
+    }
+  }
+}

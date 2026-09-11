@@ -1,0 +1,7 @@
+-r requirements.txt
+
+openpyxl
+pandas
+psutil
+pyradiomics
+mirp

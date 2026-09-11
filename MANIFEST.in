@@ -1,0 +1,17 @@
+include README.md
+include LICENSE
+include CMakeLists.txt
+include pyproject.toml
+recursive-include src *.c *.h *.m *.cu
+recursive-include flash_radiomics *.py
+recursive-include flash_radiomics/schemas *.yaml
+prune configs
+prune docs
+prune helper_docs
+prune reproducibility
+prune test_functionality
+prune tutorials
+prune tools
+global-exclude *.py[cod]
+global-exclude __pycache__
+global-exclude .DS_Store

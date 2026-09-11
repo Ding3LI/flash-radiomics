@@ -1,0 +1,55 @@
+name: Build wheels
+
+"on":
+  workflow_call:
+  workflow_dispatch:
+  pull_request:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+
+jobs:
+  build-wheels:
+    name: ${{ matrix.label }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - label: Linux x86-64 CPU + CUDA
+            os: ubuntu-latest
+            archs: x86_64
+          - label: Linux ARM64 CPU + CUDA
+            os: ubuntu-24.04-arm
+            archs: aarch64
+          - label: macOS Intel
+            os: macos-15-intel
+            archs: x86_64
+          - label: macOS Apple Silicon
+            os: macos-14
+            archs: arm64
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Build and test wheels
+        uses: pypa/cibuildwheel@v4.2.1
+        with:
+          package-dir: .
+          output-dir: wheelhouse
+        env:
+          CIBW_ARCHS: ${{ matrix.archs }}
+
+      - name: Upload wheel artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: flash-radiomics-${{ matrix.os }}-${{ matrix.archs }}
+          path: wheelhouse/*.whl
+          if-no-files-found: error

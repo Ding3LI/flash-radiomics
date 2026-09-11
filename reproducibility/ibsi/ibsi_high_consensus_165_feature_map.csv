@@ -1,0 +1,166 @@
+guideline,consensus,pyr,mirp,cerr,flash
+Morphology: Volume (mesh),6-9,MeshVolume,morph_volume,Volume,original_shape_MeshVolume
+Morphology: Volume (voxel counting),6-9,VoxelVolume,morph_vol_approx,VoxelVolume,original_shape_VoxelVolume
+Morphology: Surface area (mesh),6-9,SurfaceArea,morph_area_mesh,SurfaceArea,original_shape_SurfaceArea
+Morphology: Surface to volume ratio,6-9,SurfaceVolumeRatio,morph_av,SurfaceToVolumeRatio,original_shape_SurfaceVolumeRatio
+Morphology: Compactness 1,6-9,,morph_comp_1,Compactness1,original_shape_Compactness1
+Morphology: Compactness 2,6-9,,morph_comp_2,Compactness2,original_shape_Compactness2
+Morphology: Spherical disproportion,6-9,,morph_sph_dispr,SphericalDisproportion,original_shape_SphericalDisproportion
+Morphology: Sphericity,6-9,Sphericity,morph_sphericity,Sphericity,original_shape_Sphericity
+Morphology: Asphericity,6-9,,morph_asphericity,,original_shape_Asphericity
+Morphology: Centre of mass shift,3-5,,morph_com,,original_shape_CentreOfMassShift
+Morphology: Maximum 3D diameter,6-9,Maximum3DDiameter,morph_diam,Max3DDiameter,original_shape_Maximum3DDiameter
+Morphology: Major axis length,6-9,MajorAxisLength,morph_pca_maj_axis,MajorAxisLength,original_shape_MajorAxisLength
+Morphology: Minor axis length,6-9,MinorAxisLength,morph_pca_min_axis,MinorAxisLength,original_shape_MinorAxisLength
+Morphology: Least axis length,6-9,LeastAxisLength,morph_pca_least_axis,LeastAxisLength,original_shape_LeastAxisLength
+Morphology: Elongation,6-9,Elongation,morph_pca_elongation,Elongation,original_shape_Elongation
+Morphology: Flatness,6-9,Flatness,morph_pca_flatness,Flatness,original_shape_Flatness
+Morphology: Volume density (AABB),6-9,,morph_vol_dens_aabb,,original_shape_VolumeDensityAABB
+Morphology: Area density (AABB),6-9,,morph_area_dens_aabb,,original_shape_AreaDensityAABB
+Morphology: Volume density (AEE),6-9,,morph_vol_dens_aee,,original_shape_VolumeDensityAEE
+Morphology: Area density (AEE),3-5,,morph_area_dens_aee,,original_shape_AreaDensityAEE
+Morphology: Volume density (convex hull),3-5,,morph_vol_dens_conv_hull,,original_shape_VolumeDensityConvexHull
+Morphology: Area density (convex hull),3-5,,morph_area_dens_conv_hull,,original_shape_AreaDensityConvexHull
+Morphology: Integrated intensity,6-9,,morph_integ_int,,original_shape_IntegratedIntensity
+Statistics: Mean,6-9,Mean,stat_mean,Mean,original_firstorder_Mean
+Statistics: Variance,6-9,Variance,stat_var,Variance,original_firstorder_Variance
+Statistics: Skewness,6-9,Skewness,stat_skew,Skewness,original_firstorder_Skewness
+Statistics: (Excess) kurtosis,6-9,Kurtosis,stat_kurt,,original_firstorder_Kurtosis
+Statistics: Median,6-9,Median,stat_median,Median,original_firstorder_Median
+Statistics: Minimum,6-9,Minimum,stat_min,Min,original_firstorder_Minimum
+Statistics: 10th percentile,6-9,10Percentile,stat_p10,P10,original_firstorder_10Percentile
+Statistics: 90th percentile,6-9,90Percentile,stat_p90,P90,original_firstorder_90Percentile
+Statistics: Maximum,6-9,Maximum,stat_max,Max,original_firstorder_Maximum
+Statistics: Interquartile range,6-9,InterquartileRange,stat_iqr,IQR,original_firstorder_InterquartileRange
+Statistics: Range,6-9,Range,stat_range,Range,original_firstorder_Range
+Statistics: Mean absolute deviation,6-9,MeanAbsoluteDeviation,stat_mad,MeanAbsDev,original_firstorder_MeanAbsoluteDeviation
+Statistics: Robust mean absolute deviation,6-9,RobustMeanAbsoluteDeviation,stat_rmad,RobustMeanAbsDev,original_firstorder_RobustMeanAbsoluteDeviation
+Statistics: Median absolute deviation,6-9,,stat_medad,,original_firstorder_MedianAbsoluteDeviation
+Statistics: Coefficient of variation,6-9,,stat_cov,,original_firstorder_CoefficientOfVariation
+Statistics: Quartile coefficient of dispersion,6-9,,stat_qcod,,original_firstorder_QuartileCoefficientOfDispersion
+Statistics: Energy,6-9,Energy,stat_energy,Energy,original_firstorder_Energy
+Statistics: Root mean square,6-9,RootMeanSquared,stat_rms,,original_firstorder_RootMeanSquared
+Intensity histogram: Mean,6-9,,ih_mean,,original_ih_Mean
+Intensity histogram: Variance,6-9,,ih_var,,original_ih_Variance
+Intensity histogram: Skewness,6-9,,ih_skew,,original_ih_Skewness
+Intensity histogram: (Excess) kurtosis,6-9,,ih_kurt,,original_ih_Kurtosis
+Intensity histogram: Median,6-9,,ih_median,,original_ih_Median
+Intensity histogram: Minimum,6-9,,ih_min,,original_ih_Minimum
+Intensity histogram: 10th percentile,6-9,,ih_p10,,original_ih_10Percentile
+Intensity histogram: 90th percentile,6-9,,ih_p90,,original_ih_90Percentile
+Intensity histogram: Maximum,6-9,,ih_max,,original_ih_Maximum
+Intensity histogram: Mode,6-9,,ih_mode,,original_ih_Mode
+Intensity histogram: Interquartile range,6-9,,ih_iqr,,original_ih_InterquartileRange
+Intensity histogram: Range,6-9,,ih_range,,original_ih_Range
+Intensity histogram: Mean absolute deviation,6-9,,ih_mad,,original_ih_MeanAbsoluteDeviation
+Intensity histogram: Robust mean absolute deviation,3-5,,ih_rmad,,original_ih_RobustMeanAbsoluteDeviation
+Intensity histogram: Median absolute deviation,6-9,,ih_medad,,original_ih_MedianAbsoluteDeviation
+Intensity histogram: Coefficient of variation,6-9,,ih_cov,,original_ih_CoefficientOfVariation
+Intensity histogram: Quartile coefficient of dispersion,6-9,,ih_qcod,,original_ih_QuartileCoefficientOfDispersion
+Intensity histogram: Entropy,6-9,Entropy,ih_entropy,,original_ih_Entropy
+Intensity histogram: Uniformity,6-9,Uniformity,ih_uniformity,,original_ih_Uniformity
+Intensity histogram: Maximum histogram gradient,6-9,,ih_max_grad,,original_ih_MaximumHistogramGradient
+Intensity histogram: Maximum histogram gradient intensity,3-5,,ih_max_grad_g,,original_ih_MaximumHistogramGradientIntensity
+Intensity histogram: Minimum histogram gradient,6-9,,ih_min_grad,,original_ih_MinimumHistogramGradient
+Intensity histogram: Minimum histogram gradient intensity,6-9,,ih_min_grad_g,,original_ih_MinimumHistogramGradientIntensity
+Intensity volume histogram: Volume fraction at 10% intensity,3-5,,ivh_v10,,original_ivh_VolumeFractionAt10Intensity
+Intensity volume histogram: Volume fraction at 90% intensity,6-9,,ivh_v90,,original_ivh_VolumeFractionAt90Intensity
+Intensity volume histogram: Intensity at 10% volume,3-5,,ivh_i10,,original_ivh_IntensityAt10Volume
+Intensity volume histogram: Intensity at 90% volume,3-5,,ivh_i90,,original_ivh_IntensityAt90Volume
+Intensity volume histogram: Volume fraction difference between 10% and 90% intensity,6-9,,ivh_diff_v10_v90,,original_ivh_VolumeFractionDifferenceBetween10And90Intensity
+Intensity volume histogram: Intensity difference between 10% and 90% volume,3-5,,ivh_diff_i10_i90,,original_ivh_IntensityDifferenceBetween10And90Volume
+GLCM: Joint maximum,3-5,MaximumProbability,cm_joint_max,MaximumProbability,original_glcm_MaximumProbability
+GLCM: Joint average,6-9,JointAverage,cm_joint_avg,JointAverage,original_glcm_JointAverage
+GLCM: Joint variance,3-5,SumSquares,cm_joint_var,,original_glcm_SumSquares
+GLCM: Joint entropy,6-9,JointEntropy,cm_joint_entr,JointEntropy,original_glcm_JointEntropy
+GLCM: Difference average,6-9,DifferenceAverage,cm_diff_avg,DifferenceAverage,original_glcm_DifferenceAverage
+GLCM: Difference variance,6-9,DifferenceVariance,cm_diff_var,DifferenceVariance,original_glcm_DifferenceVariance
+GLCM: Difference entropy,3-5,DifferenceEntropy,cm_diff_entr,DifferenceEntropy,original_glcm_DifferenceEntropy
+GLCM: Sum average,6-9,SumAverage,cm_sum_avg,SumAverage,original_glcm_SumAverage
+GLCM: Sum variance,3-5,,cm_sum_var,,original_glcm_SumVariance
+GLCM: Sum entropy,6-9,SumEntropy,cm_sum_entr,SumEntropy,original_glcm_SumEntropy
+GLCM: Angular second moment,6-9,JointEnergy,cm_energy,JointEnergy,original_glcm_JointEnergy
+GLCM: Contrast,6-9,Contrast,cm_contrast,Contrast,original_glcm_Contrast
+GLCM: Dissimilarity,6-9,,cm_dissimilarity,,original_glcm_Dissimilarity
+GLCM: Inverse difference,3-5,Id,cm_inv_diff,InverseDifference,original_glcm_Id
+GLCM: Normalised inverse difference,6-9,Idn,cm_inv_diff_norm,InverseDifferenceNormalized,original_glcm_Idn
+GLCM: Inverse difference moment,6-9,Idm,cm_inv_diff_mom,InverseDifferenceMoment,original_glcm_Idm
+GLCM: Normalised inverse difference moment,6-9,Idmn,cm_inv_diff_mom_norm,InverseDifferenceMomentNormalized,original_glcm_Idmn
+GLCM: Inverse variance,6-9,InverseVariance,cm_inv_var,InverseVariance,original_glcm_InverseVariance
+GLCM: Correlation,3-5,Correlation,cm_corr,Correlation,original_glcm_Correlation
+GLCM: Autocorrelation,6-9,Autocorrelation,cm_auto_corr,Autocorrelation,original_glcm_Autocorrelation
+GLCM: Cluster tendency,3-5,ClusterTendency,cm_clust_tend,ClusterTendency,original_glcm_ClusterTendency
+GLCM: Cluster shade,3-5,ClusterShade,cm_clust_shade,ClusterShade,original_glcm_ClusterShade
+GLCM: Cluster prominence,3-5,ClusterProminence,cm_clust_prom,ClusterProminence,original_glcm_ClusterProminence
+GLCM: Information correlation 1,3-5,Imc1,cm_info_corr1,InformationMeasureOfCorrelation1,original_glcm_Imc1
+GLCM: Information correlation 2,3-5,Imc2,cm_info_corr2,InformationMeasureOfCorrelation2,original_glcm_Imc2
+GLRLM: Short runs emphasis,3-5,ShortRunEmphasis,rlm_sre,ShortRunEmphasis,original_glrlm_ShortRunEmphasis
+GLRLM: Long runs emphasis,6-9,LongRunEmphasis,rlm_lre,LongRunEmphasis,original_glrlm_LongRunEmphasis
+GLRLM: Low grey level run emphasis,3-5,LowGrayLevelRunEmphasis,rlm_lgre,LowGrayLevelRunEmphasis,original_glrlm_LowGrayLevelRunEmphasis
+GLRLM: High grey level run emphasis,6-9,HighGrayLevelRunEmphasis,rlm_hgre,HighGrayLevelRunEmphasis,original_glrlm_HighGrayLevelRunEmphasis
+GLRLM: Short run low grey level emphasis,3-5,ShortRunLowGrayLevelEmphasis,rlm_srlge,ShortRunLowGrayLevelEmphasis,original_glrlm_ShortRunLowGrayLevelEmphasis
+GLRLM: Short run high grey level emphasis,6-9,ShortRunHighGrayLevelEmphasis,rlm_srhge,ShortRunHighGrayLevelEmphasis,original_glrlm_ShortRunHighGrayLevelEmphasis
+GLRLM: Long run low grey level emphasis,3-5,LongRunLowGrayLevelEmphasis,rlm_lrlge,LongRunLowGrayLevelEmphasis,original_glrlm_LongRunLowGrayLevelEmphasis
+GLRLM: Long run high grey level emphasis,3-5,LongRunHighGrayLevelEmphasis,rlm_lrhge,LongRunHighGrayLevelEmphasis,original_glrlm_LongRunHighGrayLevelEmphasis
+GLRLM: Grey level non-uniformity,3-5,GrayLevelNonUniformity,rlm_glnu,GrayLevelNonUniformity,original_glrlm_GrayLevelNonUniformity
+GLRLM: Normalised grey level non-uniformity,6-9,GrayLevelNonUniformityNormalized,rlm_glnu_norm,GrayLevelNonUniformityNormalized,original_glrlm_GrayLevelNonUniformityNormalized
+GLRLM: Run length non-uniformity,6-9,RunLengthNonUniformity,rlm_rlnu,RunLengthNonUniformity,original_glrlm_RunLengthNonUniformity
+GLRLM: Normalised run length non-uniformity,3-5,RunLengthNonUniformityNormalized,rlm_rlnu_norm,RunLengthNonUniformityNormalized,original_glrlm_RunLengthNonUniformityNormalized
+GLRLM: Run percentage,3-5,RunPercentage,rlm_r_perc,RunPercentage,original_glrlm_RunPercentage
+GLRLM: Grey level variance,3-5,GrayLevelVariance,rlm_gl_var,GrayLevelVariance,original_glrlm_GrayLevelVariance
+GLRLM: Run length variance,6-9,RunVariance,rlm_rl_var,RunVariance,original_glrlm_RunVariance
+GLRLM: Run entropy,6-9,RunEntropy,rlm_rl_entr,RunEntropy,original_glrlm_RunEntropy
+GLSZM: Small zone emphasis,6-9,SmallAreaEmphasis,szm_sze,SmallAreaEmphasis,original_glszm_SmallAreaEmphasis
+GLSZM: Large zone emphasis,6-9,LargeAreaEmphasis,szm_lze,LargeAreaEmphasis,original_glszm_LargeAreaEmphasis
+GLSZM: Low grey level emphasis,6-9,LowGrayLevelZoneEmphasis,szm_lgze,LowGrayLevelZoneEmphasis,original_glszm_LowGrayLevelZoneEmphasis
+GLSZM: High grey level emphasis,6-9,HighGrayLevelZoneEmphasis,szm_hgze,HighGrayLevelZoneEmphasis,original_glszm_HighGrayLevelZoneEmphasis
+GLSZM: Small zone low grey level emphasis,6-9,SmallAreaLowGrayLevelEmphasis,szm_szlge,SmallAreaLowGrayLevelEmphasis,original_glszm_SmallAreaLowGrayLevelEmphasis
+GLSZM: Small zone high grey level emphasis,6-9,SmallAreaHighGrayLevelEmphasis,szm_szhge,SmallAreaHighGrayLevelEmphasis,original_glszm_SmallAreaHighGrayLevelEmphasis
+GLSZM: Large zone low grey level emphasis,6-9,LargeAreaLowGrayLevelEmphasis,szm_lzlge,LargeAreaLowGrayLevelEmphasis,original_glszm_LargeAreaLowGrayLevelEmphasis
+GLSZM: Large zone high grey level emphasis,6-9,LargeAreaHighGrayLevelEmphasis,szm_lzhge,LargeAreaHighGrayLevelEmphasis,original_glszm_LargeAreaHighGrayLevelEmphasis
+GLSZM: Grey level non-uniformity,6-9,GrayLevelNonUniformity,szm_glnu,GrayLevelNonUniformity,original_glszm_GrayLevelNonUniformity
+GLSZM: Normalised grey level non-uniformity,6-9,GrayLevelNonUniformityNormalized,szm_glnu_norm,GrayLevelNonUniformityNormalized,original_glszm_GrayLevelNonUniformityNormalized
+GLSZM: Zone size non-uniformity,6-9,SizeZoneNonUniformity,szm_zsnu,SizeZoneNonUniformity,original_glszm_SizeZoneNonUniformity
+GLSZM: Normalised zone size non-uniformity,6-9,SizeZoneNonUniformityNormalized,szm_zsnu_norm,SizeZoneNonUniformityNormalized,original_glszm_SizeZoneNonUniformityNormalized
+GLSZM: Zone percentage,6-9,ZonePercentage,szm_z_perc,ZonePercentage,original_glszm_ZonePercentage
+GLSZM: Grey level variance,6-9,GrayLevelVariance,szm_gl_var,GrayLevelVariance,original_glszm_GrayLevelVariance
+GLSZM: Zone size variance,6-9,ZoneVariance,szm_zs_var,ZoneVariance,original_glszm_ZoneVariance
+GLSZM: Zone size entropy,6-9,ZoneEntropy,szm_zs_entr,ZoneEntropy,original_glszm_ZoneEntropy
+GLDZM: Small distance emphasis,3-5,,dzm_sde,,original_gldzm_SmallDistanceEmphasis
+GLDZM: Large distance emphasis,3-5,,dzm_lde,,original_gldzm_LargeDistanceEmphasis
+GLDZM: Low grey level emphasis,3-5,,dzm_lgze,,original_gldzm_LowGrayLevelZoneEmphasis
+GLDZM: High grey level emphasis,6-9,,dzm_hgze,,original_gldzm_HighGrayLevelZoneEmphasis
+GLDZM: Small distance low grey level emphasis,3-5,,dzm_sdlge,,original_gldzm_SmallDistanceLowGrayLevelEmphasis
+GLDZM: Small distance high grey level emphasis,3-5,,dzm_sdhge,,original_gldzm_SmallDistanceHighGrayLevelEmphasis
+GLDZM: Large distance low grey level emphasis,3-5,,dzm_ldlge,,original_gldzm_LargeDistanceLowGrayLevelEmphasis
+GLDZM: Large distance high grey level emphasis,3-5,,dzm_ldhge,,original_gldzm_LargeDistanceHighGrayLevelEmphasis
+GLDZM: Grey level non-uniformity,3-5,,dzm_glnu,,original_gldzm_GrayLevelNonUniformity
+GLDZM: Normalised grey level non-uniformity,3-5,,dzm_glnu_norm,,original_gldzm_GrayLevelNonUniformityNormalized
+GLDZM: Zone distance non-uniformity,3-5,,dzm_zdnu,,original_gldzm_ZoneDistanceNonUniformity
+GLDZM: Normalised zone distance non-uniformity,3-5,,dzm_zdnu_norm,,original_gldzm_ZoneDistanceNonUniformityNormalized
+GLDZM: Zone percentage,3-5,,dzm_z_perc,,original_gldzm_ZonePercentage
+GLDZM: Grey level variance,3-5,,dzm_gl_var,,original_gldzm_GrayLevelVariance
+GLDZM: Zone distance variance,3-5,,dzm_zd_var,,original_gldzm_ZoneDistanceVariance
+GLDZM: Zone distance entropy,3-5,,dzm_zd_entr,,original_gldzm_ZoneDistanceEntropy
+NGTDM: Coarseness,6-9,Coarseness,ngt_coarseness,Coarseness,original_ngtdm_Coarseness
+NGTDM: Contrast,6-9,Contrast,ngt_contrast,Contrast,original_ngtdm_Contrast
+NGTDM: Busyness,6-9,Busyness,ngt_busyness,Busyness,original_ngtdm_Busyness
+NGTDM: Complexity,6-9,Complexity,ngt_complexity,Complexity,original_ngtdm_Complexity
+NGTDM: Strength,6-9,Strength,ngt_strength,Strength,original_ngtdm_Strength
+NGLDM: Low dependence emphasis,6-9,SmallDependenceEmphasis,ngl_lde,,original_gldm_SmallDependenceEmphasis
+NGLDM: High dependence emphasis,6-9,LargeDependenceEmphasis,ngl_hde,,original_gldm_LargeDependenceEmphasis
+NGLDM: Low grey level count emphasis,6-9,LowGrayLevelEmphasis,ngl_lgce,,original_gldm_LowGrayLevelEmphasis
+NGLDM: High grey level count emphasis,6-9,HighGrayLevelEmphasis,ngl_hgce,,original_gldm_HighGrayLevelEmphasis
+NGLDM: Low dependence low grey level emphasis,6-9,SmallDependenceLowGrayLevelEmphasis,ngl_ldlge,,original_gldm_SmallDependenceLowGrayLevelEmphasis
+NGLDM: Low dependence high grey level emphasis,6-9,SmallDependenceHighGrayLevelEmphasis,ngl_ldhge,,original_gldm_SmallDependenceHighGrayLevelEmphasis
+NGLDM: High dependence low grey level emphasis,6-9,LargeDependenceLowGrayLevelEmphasis,ngl_hdlge,,original_gldm_LargeDependenceLowGrayLevelEmphasis
+NGLDM: High dependence high grey level emphasis,6-9,LargeDependenceHighGrayLevelEmphasis,ngl_hdhge,,original_gldm_LargeDependenceHighGrayLevelEmphasis
+NGLDM: Grey level non-uniformity,6-9,GrayLevelNonUniformity,ngl_glnu,,original_gldm_GrayLevelNonUniformity
+NGLDM: Normalised grey level non-uniformity,6-9,,ngl_glnu_norm,,original_gldm_GrayLevelNonUniformityNormalized
+NGLDM: Dependence count non-uniformity,6-9,DependenceNonUniformity,ngl_dcnu,,original_gldm_DependenceNonUniformity
+NGLDM: Normalised dependence count non-uniformity,6-9,DependenceNonUniformityNormalized,ngl_dcnu_norm,,original_gldm_DependenceNonUniformityNormalized
+NGLDM: Dependence count percentage,3-5,,ngl_dc_perc,,original_gldm_DependenceCountPercentage
+NGLDM: Grey level variance,6-9,GrayLevelVariance,ngl_gl_var,,original_gldm_GrayLevelVariance
+NGLDM: Dependence count variance,6-9,DependenceVariance,ngl_dc_var,,original_gldm_DependenceVariance
+NGLDM: Dependence count entropy,6-9,DependenceEntropy,ngl_dc_entr,,original_gldm_DependenceEntropy
+NGLDM: Dependence count energy,3-5,,ngl_dc_energy,,original_gldm_DependenceCountEnergy

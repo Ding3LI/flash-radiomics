@@ -1,0 +1,23 @@
+setting:
+  minimumROIDimensions: 1
+  additionalInfo: false
+  binWidth: 1.0
+  distances: [1]
+  hdf5Compression: lzf
+
+voxelSetting:
+  kernelRadius: 1
+  maskedKernel: true
+  initValue: 0.0
+  voxelBatch: 64
+
+imageType:
+  Original: {}
+
+spatialFeatureClass:
+  firstorder: []
+  glcm: []
+  glrlm: []
+  glszm: []
+  gldm: []
+  ngtdm: []
