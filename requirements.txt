@@ -5,4 +5,5 @@ pykwalify>=1.8.0
 PyWavelets>=1.0.0
 scipy>=1.6.0
 scikit-image>=0.19.0
+scikit-learn>=1.0.0
 trimesh>=3.20.0

@@ -17,6 +17,7 @@ test-requires = [
   "PyWavelets>=1.0.0",
   "scipy>=1.6.0",
   "scikit-image>=0.19.0",
+  "scikit-learn>=1.0.0",
   "trimesh>=3.20.0",
 ]
 test-command = "python -I -c \"import flash_radiomics as fr; backends = fr.detect_backends(); assert backends['cpu'], backends; assert fr.getFeatureClasses(); print('Flash-Radiomics', fr.__version__, backends, fr.__file__)\""

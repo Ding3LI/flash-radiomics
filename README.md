@@ -32,7 +32,7 @@ Python 3.10 through 3.14 is supported. Install the Python dependencies, then
 install the published wheel:
 
 ```bash
-python -m pip install numpy h5py SimpleITK pykwalify PyWavelets scipy scikit-image trimesh
+python -m pip install numpy h5py SimpleITK pykwalify PyWavelets scipy scikit-image scikit-learn trimesh
 python -m pip install --only-binary=flash-radiomics --no-deps flash-radiomics
 ```
 
