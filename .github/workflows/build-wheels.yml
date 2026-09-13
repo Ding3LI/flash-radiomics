@@ -48,7 +48,7 @@ jobs:
           CIBW_ARCHS: ${{ matrix.archs }}
 
       - name: Upload wheel artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7.0.1
         with:
           name: flash-radiomics-${{ matrix.os }}-${{ matrix.archs }}
           path: wheelhouse/*.whl

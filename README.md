@@ -28,12 +28,16 @@ for the end-to-end functionality test.
 
 ## Installation
 
-Python 3.10 through 3.14 is supported. Install the Python dependencies, then
-install the published wheel:
+Python 3.10 through 3.14 is supported. Install a prebuilt wheel from PyPI or
+build from a local source checkout. Python dependencies are installed separately.
+
+### Install from PyPI
+
+Install the dependencies, then the production wheel:
 
 ```bash
 python -m pip install numpy h5py SimpleITK pykwalify PyWavelets scipy scikit-image scikit-learn trimesh
-python -m pip install --only-binary=flash-radiomics --no-deps flash-radiomics
+python -m pip install --index-url https://pypi.org/simple/ --only-binary=flash-radiomics --no-deps flash-radiomics
 ```
 
 No compiler or CUDA toolkit is needed to install a wheel. Linux x86-64 and
@@ -55,15 +59,24 @@ from flash_radiomics import detect_backends
 print(detect_backends())
 ```
 
-### Development from source
+### Install from source
 
-Use an editable installation from the repository root so Python edits are
-available immediately in the active environment:
+Clone or download this repository and run from its root directory:
 
 ```bash
 python -m pip install -r requirements.txt
+python -m pip install . --no-deps
+```
+
+For development, use an editable installation instead of the second command:
+
+```bash
 python -m pip install -e . --no-deps
 ```
+
+Editable installation uses the checkout directly, so Python source edits are
+available without reinstalling. Restart the notebook kernel to reload imported
+modules after editing them.
 
 Source builds require a C11 compiler, zlib development files, and a native
 build tool such as Make. macOS requires Xcode Command Line Tools. The isolated
@@ -74,15 +87,16 @@ is detected at runtime, not required for compilation. A driver alone does not
 provide the CUDA compiler. The default GPU targets require CUDA 11.8 or newer
 in the CUDA 11/12 series; CUDA 13 removes some of these targets.
 
-To require CUDA or explicitly disable it:
+To require CUDA or explicitly disable it for a source installation:
 
 ```bash
-FLASH_RADIOMICS_ENABLE_CUDA=on python -m pip install -e . --no-deps
-FLASH_RADIOMICS_ENABLE_CUDA=off python -m pip install -e . --no-deps
+FLASH_RADIOMICS_ENABLE_CUDA=on python -m pip install . --no-deps
+FLASH_RADIOMICS_ENABLE_CUDA=off python -m pip install . --no-deps
 ```
 
-Choose one command. Re-run the editable installation after changing native
-C, CUDA, or MPS code, and restart the Python process to load rebuilt libraries.
+Choose one command; add `-e` before `.` for editable development. Re-run the
+source installation after changing native C, CUDA, or MPS code, and restart
+the Python process to load rebuilt libraries.
 Build-time flags do not alter an already installed wheel.
 
 `bash COMPILE.sh` is useful for native-only development: it requires CMake
@@ -549,6 +563,28 @@ deployment target.
 
 ## Citation
 
+If you use Flash-Radiomics in your research, please cite the software:
+
+```bibtex
+@software{ding_flash_radiomics_2026,
+  author  = {
+    Ding, Shanli and
+    Hu, Yiyi and
+    Fu, Ziyu and
+    Lin, Chia-Hsin and
+    Luo, Ruihan and
+    Chun, Jaehee and
+    Zhang, Xinyue and
+    Mawlawi, Osama
+  },
+  title   = {Flash-Radiomics: A Scalable Hybrid CPU–CUDA Engine for Standardized Scalar Radiomics and Accelerated Spatial Mapping},
+  version = {1.0.0},
+  year    = {2026},
+  url     = {https://github.com/Ding3LI/flash-radiomics}
+}
+```
+
+A manuscript describing Flash-Radiomics is currently under review, and a preprint is in preparation. The corresponding publication citation will be added here once it becomes publicly available.
 
 ## License
 
